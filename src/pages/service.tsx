@@ -1,9 +1,10 @@
-import Link from "next/link"; 
-import styles from "./index.module.css"
-export default function Home() {
+import Link from "next/link"
+import styles from "./../app/index.module.css"
+
+const Service = () => {
   return (
     <>
-   <nav className={styles.nav}>
+    <nav className={styles.nav}>
         <img src="./logo.png"  />
         <div className={styles.navIcons}>
             <ul>
@@ -14,38 +15,11 @@ export default function Home() {
             </ul>
         </div>
     </nav>
-    <section className={styles.home}>
-        <h1>Digital Strategies that Fuel Your Growth.</h1>
-        <p>At Digital Marketing, we craft tailored digital strategies to accelerate your business growth. From website design to social media marketing and SEO, we help your brand reach its full potential. Let us fuel your success with innovative digital solutions.</p>
-    </section>
-    <section className={styles.about}>
-        <div className={styles.container}>
-            <div className={styles.img}>
-                <img src="./about.jpg" alt=""/>
-            </div>
-            <div className={styles.content}>
-                <h1>About US</h1>
-                <p>At Digital Marketing, we are passionate about helping businesses thrive in the 
-                    fast-paced online world. Our mission is to provide innovative and results-driven 
-                    digital marketing solutions that empower brands to achieve their full potential. 
-                    With a team of experienced professionals, we specialize in a range of services 
-                    including website design and development, SEO, social media marketing, and graphic 
-                    design.<br/><br/>We believe that every business is unique, which is why we craft 
-                    customized strategies tailored to your specific needs and objectives. Our approach 
-                    focuses on delivering measurable results, ensuring your brand not only gains 
-                    visibility but also connects meaningfully with your target audience. Whether you are 
-                    aiming to improve your search engine rankings, build an engaging social media 
-                    presence, or create a stunning website, we are committed to driving your success.
-                    <br/><br/>At Digital Marketing, we see ourselves as your partner in growth. With a 
-                    keen understanding of the latest industry trends and tools, we help businesses stay 
-                    ahead of the competition and navigate the digital landscape with confidence. 
-                    Together, let’s elevate your brand and achieve lasting success in the digital world.
-                    </p>
-            </div>
-        </div>
+    <section className={styles.serviceHome}>
+        <h1>Services</h1>
     </section>
 
-    <section className={styles.services}>
+    <section className={styles.servicesmain}>
         <h1>Our Services</h1>
         <p>
             We specialize in website design, SEO, social media marketing, and graphic design to 
@@ -168,18 +142,17 @@ export default function Home() {
             world presents. Let us work together to elevate your brand and achieve lasting success.
         </p>
     </section>
-
     <section className={styles.contact}>
         <h2>Contact Us</h2>
         <div className={styles.contFluid}>
            <label htmlFor="Name">Full Name</label>
-           <input type="text" name="" placeholder="Enter Your Name" />
+           <input type="text" placeholder="Enter Your Name" />
 
             <label htmlFor="email">Email</label>
-            <input type="email" name="" placeholder="Enter Your Email" />
+            <input type="email" placeholder="Enter Your Email" />
 
             <label htmlFor="Number">Phone Number</label>
-            <input type="text" name="" placeholder="Enter Your Phone Number" />
+            <input type="text" placeholder="Enter Your Phone Number" />
 
             <button className={styles.btn}>Submit</button>
         </div>
@@ -195,7 +168,9 @@ export default function Home() {
                 <Link href="/contact">Contact</Link>
             </ul>
         </div>
-    </footer> 
- </>
-  );
+    </footer>
+    </>
+  )
 }
+
+export default Service

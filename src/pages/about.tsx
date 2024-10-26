@@ -1,9 +1,9 @@
-import Link from "next/link"; 
-import styles from "./index.module.css"
-export default function Home() {
-  return (
-    <>
-   <nav className={styles.nav}>
+import Link from "next/link"
+import styles from "./about.module.css"
+const About = () => {
+    return (
+      <>
+      <nav className={styles.nav}>
         <img src="./logo.png"  />
         <div className={styles.navIcons}>
             <ul>
@@ -14,16 +14,16 @@ export default function Home() {
             </ul>
         </div>
     </nav>
-    <section className={styles.home}>
-        <h1>Digital Strategies that Fuel Your Growth.</h1>
-        <p>At Digital Marketing, we craft tailored digital strategies to accelerate your business growth. From website design to social media marketing and SEO, we help your brand reach its full potential. Let us fuel your success with innovative digital solutions.</p>
+    <section className={styles.about_cont}>
+        <h1>About</h1>
     </section>
+
     <section className={styles.about}>
         <div className={styles.container}>
             <div className={styles.img}>
-                <img src="./about.jpg" alt=""/>
+                <img src="./about.jpg" alt="" />
             </div>
-            <div className={styles.content}>
+            <div className="content">
                 <h1>About US</h1>
                 <p>At Digital Marketing, we are passionate about helping businesses thrive in the 
                     fast-paced online world. Our mission is to provide innovative and results-driven 
@@ -41,91 +41,6 @@ export default function Home() {
                     ahead of the competition and navigate the digital landscape with confidence. 
                     Together, let’s elevate your brand and achieve lasting success in the digital world.
                     </p>
-            </div>
-        </div>
-    </section>
-
-    <section className={styles.services}>
-        <h1>Our Services</h1>
-        <p>
-            We specialize in website design, SEO, social media marketing, and graphic design to 
-            elevate your online presence.
-        </p>
-
-        <div className={styles.serviceCards}>
-            <div className={styles.containerFluid}>
-                <div>
-                <img src="./web-design.png" alt="" />
-                </div>
-                <div>
-                    <h2>Website Development</h2>
-                    <p>We create stunning, user-friendly websites tailored to your brands needs. 
-                        Our development process ensures seamless functionality and an engaging user 
-                        experience.</p>
-                    <Link href="/website" className="text-black underline">Read More</Link>
-                </div>
-            </div>
-
-            <div className={styles.containerFluid}>
-                <div>
-                <img src="./GRAPHICS.jpg" alt="" />
-                </div>
-                <div>
-                    <h2>Graphic Designing</h2>
-                    <p>Our graphic design services deliver visually striking materials that capture 
-                        attention. From logos to marketing collateral, we bring your brands vision 
-                        to life.</p>
-                    <Link href="/graphic" className="text-black underline border-black">Read More</Link>
-                </div>
-            </div>
-
-            <div className={styles.containerFluid}>
-                <div>
-                <img src="./SMM.jpg" alt="" />
-                </div>
-                <div>
-                    <h2>Social Media Marketing</h2>
-                    <p>We craft strategic social media campaigns that connect your brand with its 
-                        audience. Our targeted approach boosts engagement and enhances your online 
-                        presence.</p>
-                    <Link href="/smm" className="text-black underline border-slate-950">Read More</Link>
-                </div>
-            </div>
-
-            <div className={styles.containerFluid}>
-                <div>
-                 <img src="./SEO.png" alt="" />
-                </div>
-                <div>
-                    <h2>SEO</h2>
-                    <p>Our SEO services improve your website’s search engine rankings to drive organic 
-                        traffic. We implement proven strategies to enhance visibility and attract more 
-                        visitors.</p>
-                    <Link href="/seo" className="text-black underline border-slate-950">Read More</Link>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section className={styles.portfolio}>
-        <h1>Portfolio</h1>
-
-        <div className={styles.serviceCards}>
-            <div className={styles.containerFluid}>
-                <div>
-                 <img src="./port-1.png" alt="" />
-                </div>
-            </div>
-
-            <div className={styles.containerFluid}>
-                <div>
-                <img src="./port-2.png" alt="" />
-                </div>
-            </div>
-
-            <div className={styles.containerFluid}>
-                <div>
-                <img src="./port-3.png" alt="" />
-                </div>
             </div>
         </div>
     </section>
@@ -173,13 +88,13 @@ export default function Home() {
         <h2>Contact Us</h2>
         <div className={styles.contFluid}>
            <label htmlFor="Name">Full Name</label>
-           <input type="text" name="" placeholder="Enter Your Name" />
+           <input type="text" placeholder="Enter Your Name" />
 
             <label htmlFor="email">Email</label>
-            <input type="email" name="" placeholder="Enter Your Email" />
+            <input type="email" placeholder="Enter Your Email" />
 
             <label htmlFor="Number">Phone Number</label>
-            <input type="text" name="" placeholder="Enter Your Phone Number" />
+            <input type="text" placeholder="Enter Your Phone Number" />
 
             <button className={styles.btn}>Submit</button>
         </div>
@@ -195,7 +110,9 @@ export default function Home() {
                 <Link href="/contact">Contact</Link>
             </ul>
         </div>
-    </footer> 
- </>
-  );
-}
+    </footer>
+      </>
+    )
+  }
+  
+  export default About
